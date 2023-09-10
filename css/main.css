@@ -174,6 +174,7 @@ menu .menu_patch a .logo {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+  cursor: pointer;
 }
 .search .middle .middle_left span {
   font-weight: bold;
@@ -184,6 +185,7 @@ menu .menu_patch a .logo {
 .search .middle .middle_left input {
   border: none;
   outline: none;
+  color: #9aa4af;
 }
 
 .search .middle .middle_left i {
@@ -195,6 +197,7 @@ menu .menu_patch a .logo {
   flex-direction: column;
   flex-grow: 1;
   margin-left: 20px;
+  position: relative;
 }
 
 .search .middle .middle_right > span {
@@ -260,16 +263,70 @@ menu .menu_patch a .logo {
   display: flex;
 }
 
-.search .user .user_lastest,
-.search .user .user_favorites {
-  text-align: center;
+.search .middle_right ul {
+  display: none;
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  width: 100%;
+  margin-top: 1px;
+}
+
+.search .middle_right.show ul {
+  display: flex;
+}
+
+.search .middle_right ul .lastest,
+.search .middle_right ul .favorites {
   flex-grow: 1;
-  padding: 5px 0;
-  font-size: 14px;
-  color: rgba(80, 80, 80, 0.5);
-  background-color: #ebeef1;
-  border: none;
+  text-align: center;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.19);
+}
+
+.search .middle_right ul .lastest.show .lastest_content {
+  display: flex;
+}
+
+.search .middle_right ul .lastest.show .lastest_title {
+  background-color: white;
+}
+.search .middle_right ul .favorites.show .favorites_content {
+  display: flex;
+}
+
+.search .middle_right ul .favorites.show .favorites_title {
+  background-color: white;
+}
+
+.search .middle_right ul .lastest_title,
+.search .middle_right ul .favorites_title {
+  padding: 10px 0;
+  color: #9aa4af;
+  font-size: 14px;
+}
+
+.search .middle_right ul .lastest_content,
+.search .middle_right ul .favorites_content {
+  height: 270px;
+  width: 100%;
+  background-color: white;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+}
+
+.search .middle_right ul .lastest_content .lastest_content_text,
+.search .middle_right ul .favorites_content .favorites_content_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #9aa4af;
+  font-size: 12px;
 }
 
 .search .desktop {
